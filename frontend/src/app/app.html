@@ -1,0 +1,177 @@
+<nav class="navbar">
+  <a class="logo" href="#home">verza<span>sites</span></a>
+
+  <ul class="nav-links">
+    <li><a href="#services">{{ isEnglish ? 'Services' : 'Servicios' }}</a></li>
+    <li><a href="#work">{{ isEnglish ? 'Examples' : 'Ejemplos' }}</a></li>
+    <li><a href="#pricing">{{ isEnglish ? 'Pricing' : 'Precios' }}</a></li>
+    <li><a href="#contact">{{ isEnglish ? 'Contact' : 'Contacto' }}</a></li>
+    <li>
+      <button (click)="toggleLanguage()" class="lang-btn">
+        {{ isEnglish ? 'ES' : 'EN' }}
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<header id="home" class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">
+      {{ isEnglish ? 'Websites for small businesses in Puerto Rico' : 'Páginas web para pequeños negocios en Puerto Rico' }}
+    </p>
+
+    <h1>
+      {{ isEnglish ? 'Professional websites that help local businesses get more clients.' : 'Páginas web profesionales para que negocios locales consigan más clientes.' }}
+    </h1>
+
+    <p class="hero-text">
+      {{ isEnglish ? 'We create modern, mobile-friendly websites with hosting, business email, booking options, and ongoing support — without making it complicated.' : 'Creamos páginas modernas, rápidas y adaptadas al celular con hosting, email de negocio, opción de citas y soporte continuo — sin complicarte.' }}
+    </p>
+
+    <div class="hero-actions">
+      <a class="cta-button" [href]="whatsappLink" target="_blank">
+        {{ isEnglish ? 'Request a Free Quote' : 'Cotiza por WhatsApp' }}
+      </a>
+
+      <a class="secondary-button" href="#pricing">
+        {{ isEnglish ? 'View Plans' : 'Ver planes' }}
+      </a>
+    </div>
+
+    <div class="trust-row">
+      <span>{{ isEnglish ? 'Fast launch' : 'Entrega rápida' }}</span>
+      <span>{{ isEnglish ? 'Mobile first' : 'Optimizada para celular' }}</span>
+      <span>{{ isEnglish ? 'Spanish / English' : 'Español / Inglés' }}</span>
+    </div>
+  </div>
+
+  <div class="hero-preview">
+    <div class="browser-card">
+      <div class="browser-dots"><span></span><span></span><span></span></div>
+      <div class="mockup-hero"></div>
+      <div class="mockup-lines">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="mini-cards">
+        <div></div><div></div><div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST SECTION -->
+<section class="section trust-section">
+  <div class="section-header">
+    <p class="eyebrow">{{ isEnglish ? 'Why choose us' : 'Por qué elegirnos' }}</p>
+    <h2>{{ isEnglish ? 'Built for real businesses, not just to look good' : 'Pensado para negocios reales, no solo para verse bonito' }}</h2>
+  </div>
+
+  <div class="trust-grid">
+    <div class="trust-card">
+      <h3>{{ isEnglish ? 'Made to get clients' : 'Hecho para conseguir clientes' }}</h3>
+      <p>{{ isEnglish ? 'Your website is designed to convert visitors into WhatsApp messages and real leads.' : 'Tu página convierte visitas en clientes por WhatsApp.' }}</p>
+    </div>
+
+    <div class="trust-card">
+      <h3>{{ isEnglish ? 'Simple and fast process' : 'Proceso simple y rápido' }}</h3>
+      <p>{{ isEnglish ? 'We guide you step by step so you don’t have to worry about technical details.' : 'Te guiamos paso a paso sin complicaciones.' }}</p>
+    </div>
+
+    <div class="trust-card">
+      <h3>{{ isEnglish ? 'Looks professional everywhere' : 'Se ve profesional en todos lados' }}</h3>
+      <p>{{ isEnglish ? 'Your site works perfectly on phones, tablets, and desktop devices.' : 'Funciona perfecto en celular, tablet y computadora.' }}</p>
+    </div>
+
+    <div class="trust-card">
+      <h3>{{ isEnglish ? 'Built for Puerto Rico businesses' : 'Hecho para negocios en Puerto Rico' }}</h3>
+      <p>{{ isEnglish ? 'We understand how local businesses sell and communicate with clients.' : 'Entendemos cómo venden los negocios locales.' }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section services-section">
+  <div class="section-header">
+    <p class="eyebrow">{{ isEnglish ? 'What we build' : 'Qué hacemos' }}</p>
+    <h2>{{ isEnglish ? 'Everything your business needs online' : 'Todo lo que tu negocio necesita online' }}</h2>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="icon">01</div>
+      <h3>{{ isEnglish ? 'Business Website' : 'Página para negocio' }}</h3>
+      <p>{{ isEnglish ? 'A clean website that explains what you do and converts visitors into leads.' : 'Una página que convierte visitantes en clientes.' }}</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">02</div>
+      <h3>{{ isEnglish ? 'Booking & Contact' : 'Citas y contacto' }}</h3>
+      <p>{{ isEnglish ? 'Add WhatsApp, forms, appointment links and more.' : 'WhatsApp, formularios y citas integradas.' }}</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">03</div>
+      <h3>{{ isEnglish ? 'Hosting & Support' : 'Hosting y soporte' }}</h3>
+      <p>{{ isEnglish ? 'Monthly support so your website stays online and updated.' : 'Soporte mensual para mantener tu página activa.' }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="section work-section">
+  <div class="section-header">
+    <p class="eyebrow">{{ isEnglish ? 'Example industries' : 'Ejemplos' }}</p>
+    <h2>{{ isEnglish ? 'Websites for service businesses' : 'Páginas para negocios de servicio' }}</h2>
+  </div>
+
+  <div class="work-grid">
+    <div class="work-card"><span>Landscaping</span></div>
+    <div class="work-card"><span>Nails</span></div>
+    <div class="work-card"><span>Insurance</span></div>
+    <div class="work-card"><span>Doors</span></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section pricing-section">
+  <div class="section-header">
+    <p class="eyebrow">{{ isEnglish ? 'Simple pricing' : 'Precio simple' }}</p>
+    <h2>{{ isEnglish ? 'Start without paying everything upfront' : 'Empieza sin pagar todo upfront' }}</h2>
+  </div>
+
+  <div class="pricing-card">
+    <div>
+      <p class="plan-label">Starter</p>
+      <h3>$299 <span>setup</span></h3>
+      <p class="price-note">$29/month support</p>
+    </div>
+
+    <ul>
+      <li>Custom design</li>
+      <li>Mobile ready</li>
+      <li>Business email</li>
+      <li>WhatsApp integration</li>
+    </ul>
+
+    <a class="cta-button" [href]="whatsappLink" target="_blank">
+      {{ isEnglish ? 'Start Now' : 'Empezar' }}
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="contact-container">
+    <p class="eyebrow">{{ isEnglish ? 'Ready?' : '¿Listo?' }}</p>
+    <h2>{{ isEnglish ? 'Let’s build your website' : 'Creamos tu página' }}</h2>
+
+    <a class="cta-button" [href]="whatsappLink" target="_blank">
+      WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FLOAT BUTTON -->
+<a class="whatsapp-float" [href]="whatsappLink" target="_blank">
+  💬
+</a>
