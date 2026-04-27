@@ -120,15 +120,49 @@
 <!-- WORK -->
 <section id="work" class="section work-section">
   <div class="section-header">
-    <p class="eyebrow">{{ isEnglish ? 'Example industries' : 'Ejemplos' }}</p>
-    <h2>{{ isEnglish ? 'Websites for service businesses' : 'Páginas para negocios de servicio' }}</h2>
+    <p class="eyebrow">
+      {{ isEnglish ? 'Example industries' : 'Ejemplos' }}
+    </p>
+
+    <h2>
+      {{ isEnglish ? 'Websites for service businesses' : 'Páginas para negocios de servicio' }}
+    </h2>
   </div>
 
   <div class="work-grid">
-    <div class="work-card"><span>Landscaping</span></div>
-    <div class="work-card"><span>Nails</span></div>
-    <div class="work-card"><span>Insurance</span></div>
-    <div class="work-card"><span>Doors</span></div>
+
+    <div class="work-card"
+         (click)="openWhatsApp('landscaping')">
+      <img src="assets/images/landscaping.jpg" alt="Landscaping website">
+      <div class="overlay">
+        <span>Landscaping</span>
+      </div>
+    </div>
+
+    <div class="work-card"
+         (click)="openWhatsApp('nails')">
+      <img src="assets/images/nails.jpg" alt="Nails website">
+      <div class="overlay">
+        <span>Nails</span>
+      </div>
+    </div>
+
+    <div class="work-card"
+         (click)="openWhatsApp('insurance')">
+      <img src="assets/images/insurance.jpg" alt="Insurance website">
+      <div class="overlay">
+        <span>Insurance</span>
+      </div>
+    </div>
+
+    <div class="work-card"
+         (click)="openWhatsApp('doors')">
+      <img src="assets/images/doors.jpg" alt="Doors website">
+      <div class="overlay">
+        <span>Doors</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
