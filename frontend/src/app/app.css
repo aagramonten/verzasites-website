@@ -38,7 +38,6 @@ a {
   text-transform: lowercase;
 }
 
-/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .logo span {
   color: #1d4ed8; 
 }
@@ -58,7 +57,6 @@ a {
   text-transform: uppercase;
 }
 
-/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .nav-links a:hover {
   color: #1d4ed8;
 }
@@ -75,7 +73,6 @@ a {
 }
 
 /* HERO */
-/* --- ACTUALIZADO: Tonos del gradiente para hacer match con el nuevo azul --- */
 .hero {
   min-height: 88vh;
   display: grid;
@@ -94,7 +91,6 @@ a {
   max-width: 760px;
 }
 
-/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .eyebrow {
   display: inline-flex;
   margin-bottom: 18px;
@@ -141,7 +137,6 @@ a {
   transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
-/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .cta-button {
   background: #1d4ed8;
   color: white;
@@ -154,7 +149,6 @@ a {
   border: 1px solid rgba(15, 23, 42, 0.1);
 }
 
-/* --- ACTUALIZADO: Hover del CTA con azul más oscuro --- */
 .cta-button:hover {
   transform: translateY(-3px);
   background: #1e40af;
@@ -212,7 +206,6 @@ a {
   background: #cbd5e1;
 }
 
-/* --- ACTUALIZADO: Gradiente del mockup para hacer match --- */
 .mockup-hero {
   min-height: 210px;
   border-radius: 24px;
@@ -245,7 +238,6 @@ a {
   width: 56%;
 }
 
-/* --- ACTUALIZADO: Borde sutil en las mini cards --- */
 .mini-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -327,8 +319,8 @@ a {
   margin: 0 auto;
 }
 
+/* --- ACTUALIZADO: .work-card removido de aquí para no heredar estilos no deseados --- */
 .service-card,
-.work-card,
 .pricing-card,
 .contact-container {
   background: white;
@@ -343,10 +335,9 @@ a {
   cursor: pointer;
 }
 
-/* --- ACTUALIZADO: Hover effect de la card --- */
 .service-card:hover {
   transform: translateY(-10px);
-  background: #0f172a; /* El azul marino oscuro de tu logo */
+  background: #0f172a;
   color: white;
   box-shadow: 0 24px 55px rgba(15, 23, 42, 0.16);
   border-color: #1d4ed8; 
@@ -370,7 +361,6 @@ a {
   color: #cbd5e1;
 }
 
-/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .service-card.highlighted .icon,
 .icon {
   color: #1d4ed8;
@@ -389,7 +379,7 @@ a {
   line-height: 1.75;
 }
 
-/* WORK */
+/* WORK (GALERÍA ACTUALIZADA) */
 .work-section {
   background: #f1f5f9;
 }
@@ -398,20 +388,29 @@ a {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+/* --- ACTUALIZADO: Tarjetas de imágenes limpias --- */
 .work-card {
-  min-height: 180px;
-  display: flex;
-  align-items: flex-end;
-  padding: 22px;
-  background:
-    linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.72)),
-    linear-gradient(135deg, #dbeafe, #bfdbfe);
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-.work-card span {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 900;
+.work-card:hover {
+  transform: translateY(-5px);
+}
+
+.work-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  display: none; 
 }
 
 /* PRICING */
@@ -425,7 +424,6 @@ a {
   align-items: center;
 }
 
-/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .plan-label {
   color: #1d4ed8;
   font-weight: 950;
@@ -460,7 +458,6 @@ a {
   gap: 12px;
 }
 
-/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .pricing-card li::before {
   content: '✓';
   color: #1d4ed8;
