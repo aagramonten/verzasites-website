@@ -38,8 +38,9 @@ a {
   text-transform: lowercase;
 }
 
+/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .logo span {
-  color: #2563eb;
+  color: #1d4ed8; 
 }
 
 .nav-links {
@@ -57,8 +58,9 @@ a {
   text-transform: uppercase;
 }
 
+/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .nav-links a:hover {
-  color: #2563eb;
+  color: #1d4ed8;
 }
 
 .lang-btn {
@@ -73,6 +75,7 @@ a {
 }
 
 /* HERO */
+/* --- ACTUALIZADO: Tonos del gradiente para hacer match con el nuevo azul --- */
 .hero {
   min-height: 88vh;
   display: grid;
@@ -82,7 +85,7 @@ a {
   padding: 90px 7% 70px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 85% 15%, rgba(37, 99, 235, 0.18), transparent 32%),
+    radial-gradient(circle at 85% 15%, rgba(29, 78, 216, 0.15), transparent 32%),
     radial-gradient(circle at 10% 90%, rgba(14, 165, 233, 0.16), transparent 28%),
     #f8fafc;
 }
@@ -91,10 +94,11 @@ a {
   max-width: 760px;
 }
 
+/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .eyebrow {
   display: inline-flex;
   margin-bottom: 18px;
-  color: #2563eb;
+  color: #1d4ed8;
   font-size: 0.82rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -134,13 +138,14 @@ a {
   padding: 0 24px;
   border-radius: 16px;
   font-weight: 900;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
+/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .cta-button {
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
-  box-shadow: 0 18px 38px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 18px 38px rgba(29, 78, 216, 0.25);
 }
 
 .secondary-button {
@@ -149,7 +154,13 @@ a {
   border: 1px solid rgba(15, 23, 42, 0.1);
 }
 
-.cta-button:hover,
+/* --- ACTUALIZADO: Hover del CTA con azul más oscuro --- */
+.cta-button:hover {
+  transform: translateY(-3px);
+  background: #1e40af;
+  box-shadow: 0 22px 45px rgba(29, 78, 216, 0.35);
+}
+
 .secondary-button:hover {
   transform: translateY(-3px);
 }
@@ -201,11 +212,12 @@ a {
   background: #cbd5e1;
 }
 
+/* --- ACTUALIZADO: Gradiente del mockup para hacer match --- */
 .mockup-hero {
   min-height: 210px;
   border-radius: 24px;
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(37, 99, 235, 0.86)),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(29, 78, 216, 0.86)),
     linear-gradient(45deg, #dbeafe, #eff6ff);
 }
 
@@ -233,6 +245,7 @@ a {
   width: 56%;
 }
 
+/* --- ACTUALIZADO: Borde sutil en las mini cards --- */
 .mini-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -244,7 +257,7 @@ a {
   height: 84px;
   border-radius: 18px;
   background: #eef2ff;
-  border: 1px solid rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(29, 78, 216, 0.1); 
 }
 
 /* SECTIONS */
@@ -326,6 +339,26 @@ a {
 
 .service-card {
   padding: 34px;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease, color 0.28s ease, border-color 0.28s ease;
+  cursor: pointer;
+}
+
+/* --- ACTUALIZADO: Hover effect de la card --- */
+.service-card:hover {
+  transform: translateY(-10px);
+  background: #0f172a; /* El azul marino oscuro de tu logo */
+  color: white;
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.16);
+  border-color: #1d4ed8; 
+}
+
+.service-card:hover h3 {
+  color: white;
+}
+
+.service-card:hover p,
+.service-card:hover .icon {
+  color: #cbd5e1;
 }
 
 .service-card.highlighted {
@@ -333,13 +366,14 @@ a {
   color: white;
 }
 
-.service-card.highlighted p,
-.service-card.highlighted .icon {
+.service-card.highlighted p {
   color: #cbd5e1;
 }
 
+/* --- ACTUALIZADO: Nuevo color del logo VS --- */
+.service-card.highlighted .icon,
 .icon {
-  color: #2563eb;
+  color: #1d4ed8;
   font-weight: 950;
   margin-bottom: 44px;
 }
@@ -391,8 +425,9 @@ a {
   align-items: center;
 }
 
+/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .plan-label {
-  color: #2563eb;
+  color: #1d4ed8;
   font-weight: 950;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -425,9 +460,10 @@ a {
   gap: 12px;
 }
 
+/* --- ACTUALIZADO: Nuevo color del logo VS --- */
 .pricing-card li::before {
   content: '✓';
-  color: #2563eb;
+  color: #1d4ed8;
   font-weight: 950;
   margin-right: 10px;
 }
@@ -470,11 +506,72 @@ a {
   font-weight: 900;
   box-shadow: 0 18px 38px rgba(37, 211, 102, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: whatsappPulse 2.2s ease-in-out infinite;
 }
 
 .whatsapp-float:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 22px 45px rgba(37, 211, 102, 0.45);
+  animation: none;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 18px 38px rgba(37, 211, 102, 0.35);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 22px 48px rgba(37, 211, 102, 0.48);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 18px 38px rgba(37, 211, 102, 0.35);
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content,
+.hero-preview,
+.section-header,
+.service-card,
+.trust-card,
+.work-card,
+.pricing-card,
+.contact-container {
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-preview {
+  animation-delay: 0.15s;
+}
+
+.service-card:nth-child(2),
+.trust-card:nth-child(2),
+.work-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.service-card:nth-child(3),
+.trust-card:nth-child(3),
+.work-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.trust-card:nth-child(4),
+.work-card:nth-child(4) {
+  animation-delay: 0.3s;
 }
 
 /* RESPONSIVE */
@@ -543,105 +640,4 @@ a {
     height: 54px;
     font-size: 1.35rem;
   }
-}
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-content,
-.hero-preview,
-.section-header,
-.service-card,
-.trust-card,
-.work-card,
-.pricing-card,
-.contact-container {
-  animation: fadeUp 0.8s ease both;
-}
-
-.hero-preview {
-  animation-delay: 0.15s;
-}
-
-.service-card:nth-child(2),
-.trust-card:nth-child(2),
-.work-card:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.service-card:nth-child(3),
-.trust-card:nth-child(3),
-.work-card:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.trust-card:nth-child(4),
-.work-card:nth-child(4) {
-  animation-delay: 0.3s;
-}
-
-.whatsapp-float {
-  animation: whatsappPulse 2.2s ease-in-out infinite;
-}
-
-@keyframes whatsappPulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 18px 38px rgba(37, 211, 102, 0.35);
-  }
-
-  50% {
-    transform: scale(1.06);
-    box-shadow: 0 22px 48px rgba(37, 211, 102, 0.48);
-  }
-
-  100% {
-    transform: scale(1);
-    box-shadow: 0 18px 38px rgba(37, 211, 102, 0.35);
-  }
-}
-
-.whatsapp-float:hover {
-  animation: none;
-}
-.service-card {
-  transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease, color 0.28s ease;
-  cursor: pointer;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  background: #0f172a;
-  color: white;
-  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.16);
-}
-
-.service-card:hover h3 {
-  color: white;
-}
-
-.service-card:hover p,
-.service-card:hover .icon {
-  color: #cbd5e1;
-}
-
-.service-card.highlighted {
-  background: white;
-  color: #0f172a;
-}
-
-.service-card.highlighted p {
-  color: #64748b;
-}
-
-.service-card.highlighted .icon {
-  color: #2563eb;
 }
